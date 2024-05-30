@@ -21,16 +21,6 @@ class RecipeRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name' => 'required|string|max:255',
-            'slug' => 'required|string|max:255',
-            'description' => 'required|string',
-            'steps' => 'required|string',
-            'time_to_prepare' => 'required|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'ingredients' => 'array',
-            'ingredients.*.id' => 'exists:ingredients,id',
-            'ingredients.*.quantity' => 'required|integer|min:1',
-        ];
+        return [];
     }
 }
