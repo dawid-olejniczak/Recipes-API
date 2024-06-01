@@ -4,7 +4,6 @@ on: [push, pull_request]
 
 jobs:
   phpunit:
-
     runs-on: ubuntu-latest
 
     services:
@@ -15,8 +14,6 @@ jobs:
         env:
           MYSQL_ROOT_PASSWORD: root
           MYSQL_DATABASE: laravel
-          MYSQL_USER: root
-          MYSQL_PASSWORD: root
         options: --health-cmd="mysqladmin ping --silent" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
@@ -46,6 +43,13 @@ jobs:
 
       - name: Generate application key
         run: php artisan key:generate
+
+      - name: Update .env for CI
+        run: |
+          sed -i 's/DB_HOST=127.0.0.1/DB_HOST=127.0.0.1/' .env
+          sed -i 's/DB_DATABASE=laravel/DB_DATABASE=laravel/' .env
+          sed -i 's/DB_USERNAME=root/DB_USERNAME=root/' .env
+          sed -i 's/DB_PASSWORD=root/DB_PASSWORD=root/' .env
 
       - name: Run Migrations
         run: php artisan migrate --force
