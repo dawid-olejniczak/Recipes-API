@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\IngredientRequest;
 use App\Models\Ingredient;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class IngredientController extends Controller
 {
@@ -30,6 +31,7 @@ class IngredientController extends Controller
 
     public function show($id)
     {
+        Log::info('Dummy Log');
         $ingredient = Ingredient::find($id);
         return response()->json($ingredient);
     }
