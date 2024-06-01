@@ -3,6 +3,8 @@
 # Recipes Management API - CDV Project
 
 [![Laravel Forge Site Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2F2ce8c01b-8a0e-4df9-af7b-a95720c1fe06%3Fdate%3D1%26commit%3D1&style=plastic)](https://forge.laravel.com/servers/793900/sites/2365743)
+![CI](https://github.com/dawid-olejniczak/recipes-api/actions/workflows/phpunit.yml/badge.svg)
+
 
 This is a Laravel-based API for managing recipes, ingredients, and ingredient lists. It supports operations such as creating, updating, deleting, and listing recipes and ingredients, as well as managing ingredients within a recipe and an ingredients list.
 
