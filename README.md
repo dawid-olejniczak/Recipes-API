@@ -6,11 +6,17 @@
 
 This is a Laravel-based API for managing recipes, ingredients, and ingredient lists. It supports operations such as creating, updating, deleting, and listing recipes and ingredients, as well as managing ingredients within a recipe and an ingredients list.
 
+## Cool technical details about the project
+- CI/CD is set up through Github Action and Forge
+- It uses latest version of Laravel Framework 
+- Full API documention is set up through Postman Collections and available online. You can find the collection [here](https://www.postman.com/dawidolejniczak/workspace/recipes-api-cdv/collection/6311894-ebf128bb-3bba-4f7a-900a-53f92d876a00).
+- It's deployed live! [http://167.71.40.16/recipes](http://167.71.40.16/recipes).
+
 ## Prerequisites
 
-- PHP >= 7.4
+- PHP >= 8.2
 - Composer
-- Laravel >= 8.x
+- Laravel >= 11.x
 - MySQL or any other database supported by Laravel
 
 ## Setup Instructions
